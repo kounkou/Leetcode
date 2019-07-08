@@ -30,3 +30,9 @@ END {
         print s[i];
     }
 }' file.txt
+
+# Understanding :
+# (awk reads column ny column instead of line by line !)
+# - so if the current line number is 1 then we put the read element in an array
+# -    else we concatenate the next read element
+# - we then display elements one by one until we found a character "" which will stop the loop
